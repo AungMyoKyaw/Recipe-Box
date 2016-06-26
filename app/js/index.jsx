@@ -36,9 +36,9 @@ var Editor = React.createClass({
 				<h2>Update</h2>
 				<form onSubmit={this.update}>
 					<label for="name">Name</label>
-					<input type="text" ref='name'value={this.state.title} onChange={this.onChangeHandler}/>
+					<input type="text" ref='name'value={this.state.title} onChange={this.onChangeHandler} required/>
 					<label for='ing'>Ingredient</label>
-					<input type="text" ref='ing' value={this.state.ing} onChange={this.onChangeHandler}/>
+					<input type="text" ref='ing' value={this.state.ing} onChange={this.onChangeHandler} required/>
 					<button>Update</button>
 				</form>
 					<button onClick={this.close}>Close</button>
@@ -170,9 +170,9 @@ var AddRecipe = React.createClass({
 				<h2>Add Recipe</h2>
 				<form onSubmit={this.submitHandler}>
 					<label for="name">Name</label>
-					<input type="text" ref='name' value={this.state.title} onChange={this.onChangeHandler} placeholder='Name'/>
+					<input type="text" ref='name' value={this.state.title} onChange={this.onChangeHandler} placeholder='Name' required/>
 					<label for="ing">Ingredients</label>
-					<input type="text" ref='ing' value={this.state.ing} onChange={this.onChangeHandler} placeholder='Enter Ingredients,Separated By Commas'/>
+					<input type="text" ref='ing' value={this.state.ing} onChange={this.onChangeHandler} placeholder='Enter Ingredients,Separated By Commas' required/>
 					<button>Add Recipe</button>
 				</form>	
 					<button onClick={this.close}>Close</button>
