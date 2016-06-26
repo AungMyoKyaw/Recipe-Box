@@ -47,7 +47,7 @@ button{
 	margin: .5em auto;
 	background-color:#FAF7F0;
 	outline: none;
-	border:.1em solid black;
+	border:.2em solid #2FBB4E;
 	border-radius:.3em;
 	cursor: pointer;
 	font-size: 1.1em;
@@ -85,7 +85,7 @@ ul{
 			width: 2em;
 			height: 2em;
 			border-radius:50%;
-			border:.3em solid #FAF7F0;
+			border:.3em solid #2FBB4E;
 			text-align: center;
 			line-height: 2em;
 			font-family: sans;
@@ -98,7 +98,7 @@ ul{
 			float: left;
 			height: 2em;
 			line-height: 2em;
-			border:.3em solid #FAF7F0;
+			border:.3em solid #2FBB4E;
 			font-family: sans;
 			font-size: 1.1em;
 			border-radius:3em;
@@ -131,8 +131,9 @@ form{
 			content:':';
 		}
 	}
-	input[type=text]{
+	input[type='text']{
 		@extend label;
+		@include placeholder-color(#2FBB4E);
 		&:after{
 			content:'';
 		}
