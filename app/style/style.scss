@@ -1,0 +1,183 @@
+@import 'juice';
+$browser-prefixes: true !default;
+html{
+	background:#EEEEEE !important;
+}
+#app{
+	@include bp(small-up){
+		margin-top:1em;
+		margin-bottom:1em;
+		width:100%;
+	}
+	@include bp(large-up){
+		margin-top:1em;
+		margin-bottom:1em;
+		width: 50%;
+		@include center-block;
+	}
+	h1{
+		text-align: center;
+		font-size: 2em;
+		font-family: sans;
+		font-weight: bolder;
+		cursor:pointer;
+		a{
+			text-decoration: none;
+		}
+		&:after{
+			display: block;
+			position: relative;
+			left:0;
+			bottom:-0;
+			width: 40%;
+			height: .2em;
+			margin:.5em auto;
+			background-color:#2FBB4E;
+			content: '';
+			transition: width 1s;
+		}
+		&:hover:after{
+			width: 100%;
+		}
+	}
+}
+button{
+	display: block;
+	height: 2em;
+	margin: .5em auto;
+	background-color:#FAF7F0;
+	outline: none;
+	border:.1em solid black;
+	border-radius:.3em;
+	cursor: pointer;
+	font-size: 1.1em;
+	color:black;
+	clear:both;
+	@include bp(small-up){
+		width:100%;
+		margin-top: 1em;
+	}
+	@include bp(large-up){
+		width:40%;
+	}
+}
+ul{
+	list-style-type: none;
+	display:block;
+	padding:0;
+	li{
+		display: block;
+		clear:both;
+		cursor: pointer;
+		margin: 0 auto;
+		@include bp(small-up){
+			width:100%;
+		}
+		@include bp(large-up){
+			width: 30em;
+		}
+		.no{
+			display: none;
+			@include bp(large-up){
+				display: block;
+			}
+			float: left;
+			width: 2em;
+			height: 2em;
+			border-radius:50%;
+			border:.3em solid #FAF7F0;
+			text-align: center;
+			line-height: 2em;
+			font-family: sans;
+			font-size: 1.1em;
+			padding:.5em;
+			margin-bottom: .5em;
+		}
+		.title{
+			display: block;
+			float: left;
+			height: 2em;
+			line-height: 2em;
+			border:.3em solid #FAF7F0;
+			font-family: sans;
+			font-size: 1.1em;
+			border-radius:3em;
+			padding:.5em;
+			margin-bottom: .5em;
+			margin-left: .3em;
+			overflow: auto;
+			@include bp(small-up){
+				width: 100%;
+			}
+			@include bp(large-up){
+				width: 20em;
+			}
+		}
+	}
+}
+h2{
+	@extend h1;
+}
+form{
+	clear:both;
+	label{
+		display: block;
+		width:80%;
+		margin:.5em auto;
+		font-size: 1.1em;
+		font-family: sans;
+		font-weight: bold;
+		&:after{
+			content:':';
+		}
+	}
+	input[type=text]{
+		@extend label;
+		&:after{
+			content:'';
+		}
+		outline: none;
+	}
+}
+h3{
+	opacity: .2;
+	text-align:center;
+	font-family:sans;
+	font-size:1.5em;
+	font-weight:bold;
+	&:hover{
+		opacity: .4;
+	}
+	cursor:pointer;
+}
+div#forkme{
+	display:none;
+	position: fixed;
+	bottom:0;
+	right:4em;
+	display:block;
+	width:8em;
+	height:1.4em;
+	font-weight:bold;
+	background-color:#484848;
+	@include border-top-radius(1em);
+	padding:.3em;
+	transition:width 1s;
+	opacity:.3;
+	a{
+		display: block;
+		font-size:1.1em;
+		color:white;
+		font-variant: small-caps;
+		font-family: sans;
+		text-align: center;
+		text-decoration: none;
+	}
+	&:hover{
+		width:17em;
+		opacity: .6;
+	}
+	@include bp(large-up){
+		display: block;
+	}
+}

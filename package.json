@@ -1,0 +1,15 @@
+{
+  "name": "recipe_box",
+  "version": "1.0.0",
+  "description": "Recipe Box",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Recipe",
+    "Box"
+  ],
+  "author": "Aung Myo Kyaw",
+  "license": "ISC"
+}
