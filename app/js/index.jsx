@@ -187,7 +187,7 @@ var RecipeBox = React.createClass({
 	render:function(){
 		return (
 			<div>
-				<h1><a href="/">Recipe Box</a></h1>
+				<h1><a href="./">Recipe Box</a></h1>
 				<RecipeLister/>
 				<button onClick={this.addRecipe}>Add Recipe</button>
 				<div id="forkme">
